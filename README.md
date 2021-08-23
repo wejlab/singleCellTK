@@ -61,7 +61,7 @@ BiocManager::install()
 ```
 
 After you install Bioconductor 3.6 or higher, you should be able to install the
-toolkit using `devtools::install_github("compbiomed/singleCellTK")`. If you
+toolkit using `devtools::install_github("mmkhan19/singleCellTK")`. If you
 still encounter an error, ensure your Bioconductor packages are up to date by
 running the following command.
 
@@ -79,7 +79,7 @@ BiocManager::install()
 Then, try to install the toolkit again:
 
 ```r
-devtools::install_github("compbiomed/singleCellTK")
+devtools::install_github("mmkhan19/singleCellTK")
 ```
 
 If you still encounter an error, please [contact us](mailto:dfj@bu.edu) and
