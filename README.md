@@ -26,7 +26,7 @@ or from this repository:
 
 ```r
 # install.packages("devtools")
-devtools::install_github("compbiomed/singleCellTK")
+devtools::install_github("mmkhan19/singleCellTK")
 ```
 
 ### R 3.4 Version
@@ -36,7 +36,7 @@ the following version from this repository:
 
 ```r
 # install.packages("devtools")
-devtools::install_github("compbiomed/singleCellTK", ref="r_3_4")
+devtools::install_github("mmkhan19/singleCellTK", ref="r_3_4")
 ```
 
 #### Troubleshooting Installation
