@@ -10,7 +10,7 @@
 ### Release Version
 
 You can download the release version of the Single Cell Toolkit in
-[Bioconductor v3.9](https://bioconductor.org/packages/release/bioc/html/singleCellTK.html):
+[Bioconductor v3.10](https://bioconductor.org/packages/release/bioc/html/singleCellTK.html):
 
 ```r
 if (!requireNamespace("BiocManager", quietly=TRUE))
@@ -21,12 +21,12 @@ BiocManager::install("singleCellTK")
 ### Devel Version
 
 You can download the development version of the Single Cell Toolkit in
-[Bioconductor v3.10](https://bioconductor.org/packages/devel/bioc/html/singleCellTK.html)
+[Bioconductor v3.11](https://bioconductor.org/packages/devel/bioc/html/singleCellTK.html)
 or from this repository:
 
 ```r
 # install.packages("devtools")
-devtools::install_github("compbiomed/singleCellTK")
+devtools::install_github("mmkhan19/singleCellTK")
 ```
 
 ### R 3.4 Version
@@ -36,7 +36,7 @@ the following version from this repository:
 
 ```r
 # install.packages("devtools")
-devtools::install_github("compbiomed/singleCellTK", ref="r_3_4")
+devtools::install_github("mmkhan19/singleCellTK", ref="r_3_4")
 ```
 
 #### Troubleshooting Installation
@@ -61,7 +61,7 @@ BiocManager::install()
 ```
 
 After you install Bioconductor 3.6 or higher, you should be able to install the
-toolkit using `devtools::install_github("compbiomed/singleCellTK")`. If you
+toolkit using `devtools::install_github("mmkhan19/singleCellTK")`. If you
 still encounter an error, ensure your Bioconductor packages are up to date by
 running the following command.
 
@@ -79,7 +79,7 @@ BiocManager::install()
 Then, try to install the toolkit again:
 
 ```r
-devtools::install_github("compbiomed/singleCellTK")
+devtools::install_github("mmkhan19/singleCellTK")
 ```
 
 If you still encounter an error, please [contact us](mailto:dfj@bu.edu) and

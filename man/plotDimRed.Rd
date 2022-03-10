@@ -4,9 +4,17 @@
 \alias{plotDimRed}
 \title{Plot results either on already run results of reduced dimensions data.}
 \usage{
-plotDimRed(inSCE, colorBy = "No Color", shape = "No Shape",
-  reducedDimName = NULL, useAssay = "logcounts", comp1 = NULL,
-  comp2 = NULL)
+plotDimRed(
+  inSCE,
+  colorBy = "No Color",
+  shape = "No Shape",
+  reducedDimName = NULL,
+  useAssay = "logcounts",
+  comp1 = NULL,
+  comp2 = NULL,
+  pcX = NULL,
+  pcY = NULL
+)
 }
 \arguments{
 \item{inSCE}{Input SCtkExperiment object with saved dimension reduction components
@@ -23,6 +31,12 @@ or a variable with saved results. Required}
 \item{comp1}{label for x-axis}
 
 \item{comp2}{label for y-axis}
+
+\item{pcX}{PCA component to be used for plotting(if applicable).
+Default is first PCA component for PCA data and NULL otherwise.}
+
+\item{pcY}{PCA component to be used for plotting(if applicable).
+Default is second PCA component for PCA data and NULL otherwise.}
 }
 \value{
 a ggplot of the reduced dimensions.

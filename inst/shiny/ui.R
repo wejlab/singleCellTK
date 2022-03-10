@@ -20,9 +20,15 @@ library(Biobase)
 library(base)
 library(SingleCellExperiment)
 library(singleCellTK)
+library(celda)
 library(shinycssloaders)
 library(shinythemes)
 library(umap)
+library(scater)
+library(scran)
+library(hypeR)
+library(uwot)
+library(reactable)
 
 source("helpers.R")
 source("colourGroupInput.R")
@@ -48,6 +54,7 @@ if (internetConnection){
 numSamples <- 30
 pcComponentsSelectedY <- NULL
 if (!is.null(getShinyOption("inputSCEset"))){
+  print(getShinyOption("inputSCEset"))
   numSamples <- ncol(getShinyOption("inputSCEset"))
   clusterChoice <- colnames(colData(getShinyOption("inputSCEset")))
   geneChoice <- rownames(getShinyOption("inputSCEset"))
@@ -73,14 +80,15 @@ if (is.null(getShinyOption("theme"))){
 
 source("ui_01_upload.R", local = TRUE) #creates shinyPanelUpload variable
 source("ui_02_filter.R", local = TRUE) #creates shinyPanelFilter variable
-#source("ui_03_cluster.R", local = TRUE) #creates shinyPanelCluster variable
 source("ui_03_1_genewise_vis.R", local = TRUE) #creates shinyPanelCluster variable
 source("ui_03_2_samplewise_vis.R", local = TRUE) #creates shinyPanelCluster variable
+source("ui_03_3_celda.R", local = TRUE) #creates shinyPanelCelda variable
 source("ui_04_batchcorrect.R", local = TRUE) #creates shinyPanelBatchcorrect variable
 source("ui_05_1_diffex.R", local = TRUE) #creates shinyPanelDiffex variable
 source("ui_05_2_mast.R", local = TRUE) #creates shinyPanelMAST variable
 source("ui_06_1_pathway.R", local = TRUE) #creates shinyPanelPathway variable
 source("ui_06_2_enrichR.R", local = TRUE) #creates shinyPanelEnrichR variable
+source("ui_06_3_hypeR.R", local = TRUE) #creates shinyPanelhypeR variable
 source("ui_07_subsample.R", local = TRUE) #creates shinyPanelSubsample variable
 
 if (is.null(getShinyOption("includeVersion"))){
@@ -102,13 +110,14 @@ shinyUI(
     theme = shinytheme(shinyTheme),
     #Upload Tab
     tabPanel("Upload", shinyPanelUpload),
-    tabPanel("Data Summary & Filtering", shinyPanelFilter),
+    tabPanel("QC & Filtering", shinyPanelFilter),
     navbarMenu(
       "Visualization & Clustering",
       tabPanel("Genewise Visualization", shinyPanelVis),
-      tabPanel("Samplewise Vis & Clustering", shinyPanelCluster)
+      tabPanel("Cellwise Vis & Clustering", shinyPanelCluster),
+      tabPanel("Celda", shinyPanelCelda)
     ),
-    tabPanel("Batch Correction", shinyPanelBatchcorrect),
+    #tabPanel("Batch Correction", shinyPanelBatchcorrect),
     navbarMenu(
       "Differential Expression",
       tabPanel("Differential Expression", shinyPanelDiffex),
@@ -116,8 +125,10 @@ shinyUI(
     ),
     navbarMenu(
       "Enrichment Analysis",
-      tabPanel("GSVA", shinyPanelPathway),
-      tabPanel("EnrichR", shinyPanelEnrichR)
+      tabPanel("hypeR", ShinyPanelHypeR),
+      tabPanel("EnrichR", shinyPanelEnrichR),
+      tabPanel("GSVA", shinyPanelPathway)
+      
     ),
     tabPanel("Sample Size", shinyPanelSubsample),
     footer = includeHTML("www/footer.html")
