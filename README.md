@@ -11,20 +11,7 @@
 
 ### Current Release Version
 
-You can download the release version of the Single Cell Toolkit  <!-- in
-[Bioconductor v3.10](https://bioconductor.org/packages/release/bioc/html/singleCellTK.html):
-
-```r
-if (!requireNamespace("BiocManager", quietly=TRUE))
-  install.packages("BiocManager")
-BiocManager::install("singleCellTK")
-```
-
-### Devel Version
-
-You can download the development version of the Single Cell Toolkit in
-[Bioconductor v3.11](https://bioconductor.org/packages/devel/bioc/html/singleCellTK.html)
-or --> from this repository:
+You can download the release version of the Single Cell Toolkit from this repository:
 
 ```r
 # install.packages("devtools")
