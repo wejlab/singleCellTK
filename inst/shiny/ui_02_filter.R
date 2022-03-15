@@ -11,7 +11,7 @@ orgpkgs <- c("Anopheles" = "org.Ag.eg.db", "Arabidopsis" = "org.At.tair.db",
              "Pig" = "org.Ss.eg.db", "Xenopus" = "org.Xl.eg.db")
 
 shinyPanelFilter <- fluidPage(
-  useShinyalert(),
+  #useShinyalert(),
   tags$div(
     class = "container",
     h4("QC & Filtering"),

@@ -1,5 +1,5 @@
 shinyPanelCelda <- fluidPage(
-  useShinyalert(),
+  #useShinyalert(),
   tags$div(
     class = "container",
     h1("celda: CEllular Latent Dirichlet Allocation"),
