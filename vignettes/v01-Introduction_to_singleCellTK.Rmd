@@ -3,17 +3,20 @@ title: "Introduction to singleCellTK"
 author:
 - name: David Jenkins
   affiliation: 
-  - The Section of Computational Biomedicine, Boston University School of Medicine, Boston, MA
+  - The Section of Computational Biomedicine, Boston University School of Medicine, Boston, MA; 
   - Program in Bioinformatics, Boston University, Boston, MA
   email: dfj@bu.edu
-- name: Tyler Faits
+- name: Mohammed Muzamil Khan
   affiliation: 
-  - The Section of Computational Biomedicine, Boston University School of Medicine, Boston, MA
+  - The Section of Computational Biomedicine, Boston University School of Medicine, Boston, MA; 
   - Program in Bioinformatics, Boston University, Boston, MA
+  email: mmkhan@bu.edu
 - name: W. Evan Johnson
   affiliation: 
-  - The Section of Computational Biomedicine, Boston University School of Medicine, Boston, MA
+  - The Section of Computational Biomedicine, Boston University School of Medicine, Boston, MA; 
   - Program in Bioinformatics, Boston University, Boston, MA
+  email: wej@bu.edu
+
 package: singleCellTK
 output: 
   BiocStyle::html_document:
@@ -37,59 +40,71 @@ and downstream analysis.
 
 # Installation
 
-You can download the release version of the Single Cell Toolkit in
-[Bioconductor v3.7](https://bioconductor.org/packages/release/bioc/html/singleCellTK.html):
+You can download the release version of the Single Cell Toolkit  <!-- in
+[Bioconductor v3.10](https://bioconductor.org/packages/release/bioc/html/singleCellTK.html):
 
 ```r
 if (!requireNamespace("BiocManager", quietly=TRUE))
-    install.packages("BiocManager")
+  install.packages("BiocManager")
 BiocManager::install("singleCellTK")
+```
+
+### Devel Version
+
+You can download the development version of the Single Cell Toolkit in
+[Bioconductor v3.11](https://bioconductor.org/packages/devel/bioc/html/singleCellTK.html)
+or --> from this repository:
+
+```r
+# install.packages("devtools")
+devtools::install_github("wevanjohnson/singleCellTK")
 ```
 
 ## Troubleshooting Installation
 
-For the majority of users, the commands above will install the latest version of
-the singleCellTK without any errors. Rarely, you may encounter an error due to
-previously installed versions of some packages that are required for the
-singleCellTK. If you encounter an error during installation, use the commands
-below to check the version of Bioconductor that is installed:
+For the majority of users, the commands above will install the latest version
+of the singleCellTK without any errors. Rarely, you may encounter an error due
+to previously installed versions of some packages or missing packages that are 
+required for the singleCellTK. If you encounter an error during installation, 
+use the commands below to check the version of Bioconductor that is installed:
 
-```{r eval=FALSE}
+```r
 if (!requireNamespace("BiocManager", quietly=TRUE))
-  install.packages("BiocManager")
+    install.packages("BiocManager")
 BiocManager::version()
 ```
 
-If the version number is not 3.7 or higher, you must upgrade Bioconductor to
+If the version number is not 3.14 or higher, you must upgrade Bioconductor to
 install the toolkit:
 
-```{r eval=FALSE}
+```r
 BiocManager::install()
 ```
 
-After you install Bioconductor 3.7 or higher, you should be able to install the
-toolkit using ```BiocManager::install("singleCellTK")```. If you
+After you install Bioconductor 3.14 or higher, you should be able to install the
+toolkit using `devtools::install_github("wevanjohnson/singleCellTK")`. If you
 still encounter an error, ensure your Bioconductor packages are up to date by
 running the following command.
 
-```{r eval=FALSE}
+```r
 BiocManager::valid()
 ```
 
-If the command above does not return ```TRUE```, run the following command to
+If the command above does not return `TRUE`, run the following command to
 update your R packages:
 
-```{r eval=FALSE}
+```r
 BiocManager::install()
 ```
 
 Then, try to install the toolkit again:
 
-```{r eval=FALSE}
-BiocManager::install("singleCellTK")
+```r
+devtools::install_github("wevanjohnson/singleCellTK")
 ```
 
-If you still encounter an error, please [contact us](mailto:dfj@bu.edu) and we'd be happy to help.
+If you still encounter an error, please [contact us](mailto:dfj@bu.edu) and
+we'd be happy to help.
 
 # Data Structure
 

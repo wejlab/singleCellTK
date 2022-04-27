@@ -67,7 +67,7 @@ Imports:
     hypeR (>= 1.5.1),
     reactable,
     uwot
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 Suggests:
     testthat,
     Rsubread,
@@ -84,5 +84,5 @@ Suggests:
     GSEABase
 VignetteBuilder: knitr
 URL: https://compbiomed.github.io/sctk_docs/
-BugReports: https://github.com/compbiomed/singleCellTK/issues
+BugReports: https://github.com/wevanjohnson/singleCellTK/issues
 Language: en-US

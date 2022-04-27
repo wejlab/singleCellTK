@@ -72,11 +72,11 @@ navbar:
         - text: "1: Upload"
           href: articles/v03-tab01_Upload.html
         - text: "2: Data Summary and Filtering"
-          href: articles/v04-tab02_Data-Summary-and-Filtering.html
-        - text: "3: Visualization and Clustering"
-          href: articles/v05-tab03_Visualization-and-Clustering.html
-        - text: "4: Batch Correction"
+          href: articles/v04-tab02_QC-and-Filtering.html
+        - text: "3: Batch Correction"
           href: articles/v06-tab04_Batch-Correction.html
+        - text: "4: Visualization and Clustering"
+          href: articles/v05-tab03_Visualization-and-Clustering.html
         - text: "5: Differential Expression"
           href: articles/v07-tab05_Differential-Expression.html
         - text: "6: Pathway Activity Analysis"
@@ -93,4 +93,4 @@ navbar:
       href: reference/index.html
   right:
     - icon: fa-github
-      href: https://github.com/compbiomed/singleCellTK
+      href: https://github.com/wevanjohnson/singleCellTK
