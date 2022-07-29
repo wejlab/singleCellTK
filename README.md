@@ -21,7 +21,9 @@ devtools::install_github("wevanjohnson/singleCellTK")
 ### Troubleshooting Installation
 
 For the majority of users, the commands above will install the latest version
-of the singleCellTK without any errors. Rarely, you may encounter an error due
+of the singleCellTK without any errors. Occasionally, you may get an error indicating
+a missing package, e.g., when you launch the App. In this case just install the 
+missing packages using CRAN or Bioconductor. In addition, rarely you may encounter an error due
 to previously installed versions of some packages or missing packages that are 
 required for the singleCellTK. If you encounter an error during installation, 
 use the commands below to check the version of Bioconductor that is installed:
