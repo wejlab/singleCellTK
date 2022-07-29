@@ -22,7 +22,7 @@ devtools::install_github("wevanjohnson/singleCellTK")
 
 For the majority of users, the commands above will install the latest version
 of the singleCellTK without any errors. Occasionally, you may get an error indicating
-a missing package, e.g., when you launch the App. In this case just install the 
+a missing package, e.g., "there is no package called ‘GSVAdata’", when you launch the App. In this case just install the 
 missing packages using CRAN or Bioconductor. In addition, rarely you may encounter an error due
 to previously installed versions of some packages or missing packages that are 
 required for the singleCellTK. If you encounter an error during installation, 
