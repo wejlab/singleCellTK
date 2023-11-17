@@ -58,7 +58,6 @@ Imports:
     shinyalert,
     circlize,
     enrichR,
-    celda,
     shinycssloaders,
     shinythemes,
     umap,
@@ -69,6 +68,7 @@ Imports:
     uwot
 RoxygenNote: 7.1.2
 Suggests:
+    celda,
     testthat,
     Rsubread,
     BiocStyle,
