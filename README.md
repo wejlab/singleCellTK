@@ -15,7 +15,7 @@ You can download the release version of the Single Cell Toolkit from this reposi
 
 ```r
 # install.packages("devtools")
-devtools::install_github("wevanjohnson/singleCellTK")
+devtools::install_github("wejlab/singleCellTK")
 ```
 
 ### Troubleshooting Installation
@@ -42,7 +42,7 @@ BiocManager::install()
 ```
 
 After you install Bioconductor 3.14 or higher, you should be able to install the
-toolkit using `devtools::install_github("wevanjohnson/singleCellTK")`. If you
+toolkit using `devtools::install_github("wejlab/singleCellTK")`. If you
 still encounter an error, ensure your Bioconductor packages are up to date by
 running the following command.
 
@@ -60,7 +60,7 @@ BiocManager::install()
 Then, try to install the toolkit again:
 
 ```r
-devtools::install_github("wevanjohnson/singleCellTK")
+devtools::install_github("wejlab/singleCellTK")
 ```
 
 If you still encounter an error, please [contact us](mailto:dfj@bu.edu) and
@@ -114,6 +114,6 @@ Information about building shiny packages is available here: http://shiny.rstudi
 When you are ready to upload your changes, commit them locally, push them to your
 forked repo, and make a pull request to the compbiomed repository.
 
-Report bugs and request features on our [GitHub issue tracker](https://github.com/wevanjohnson/singleCellTK/issues).
+Report bugs and request features on our [GitHub issue tracker](https://github.com/wejlab/singleCellTK/issues).
 
 Join us on [slack](https://compbiomed.slack.com/)!
