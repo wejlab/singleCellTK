@@ -125,7 +125,7 @@ shinyUI(
     ),
     navbarMenu(
       "Enrichment Analysis",
-      tabPanel("hypeR", ShinyPanelHypeR),
+      #tabPanel("hypeR", ShinyPanelHypeR),
       tabPanel("EnrichR", shinyPanelEnrichR),
       tabPanel("GSVA", shinyPanelPathway)
       
