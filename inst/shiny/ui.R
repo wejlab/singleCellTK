@@ -26,7 +26,7 @@ library(shinythemes)
 library(umap)
 library(scater)
 library(scran)
-library(hypeR)
+#library(hypeR)
 library(uwot)
 library(reactable)
 
@@ -88,7 +88,7 @@ source("ui_05_1_diffex.R", local = TRUE) #creates shinyPanelDiffex variable
 source("ui_05_2_mast.R", local = TRUE) #creates shinyPanelMAST variable
 source("ui_06_1_pathway.R", local = TRUE) #creates shinyPanelPathway variable
 source("ui_06_2_enrichR.R", local = TRUE) #creates shinyPanelEnrichR variable
-source("ui_06_3_hypeR.R", local = TRUE) #creates shinyPanelhypeR variable
+#source("ui_06_3_hypeR.R", local = TRUE) #creates shinyPanelhypeR variable
 source("ui_07_subsample.R", local = TRUE) #creates shinyPanelSubsample variable
 
 if (is.null(getShinyOption("includeVersion"))){
