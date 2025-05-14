@@ -2596,44 +2596,44 @@ shinyServer(function(input, output, session) {
   # Page 6.3 : Enrichment Analysis - hypeR
   #-----------------------------------------------------------------------------
   
-  genesets <- hypeR::genesets_Server("genesets")
+  #genesets <- hypeR::genesets_Server("genesets")
   
-  reactive_hyp <- eventReactive(input$enrichment, {
-    # Here are the fetched genesets
-    gsets <- genesets()
+  #reactive_hyp <- eventReactive(input$enrichment, {
+   # # Here are the fetched genesets
+   # gsets <- genesets()
     
-    # Process the signature into a character vector
-    signature <- toupper(input$hypgenes) %>%
-      stringr::str_split(pattern=",", simplify=TRUE) %>%
-      as.vector() 
+   # # Process the signature into a character vector
+   # signature <- toupper(input$hypgenes) %>%
+   #   stringr::str_split(pattern=",", simplify=TRUE) %>%
+   #   as.vector() 
     
     # Run hypeR
-    hyp <- hypeR::hypeR(signature, gsets, test="hypergeometric")
-  })
+  #  hyp <- hypeR::hypeR(signature, gsets, test="hypergeometric")
+  #})
   
   # Your custom downstream functions
-  reactive_plot <- eventReactive(input$enrichment, {
-    req(reactive_hyp())
-    p <- hypeR::hyp_dots(reactive_hyp(), top=10, fdr=0.25)
+  #reactive_plot <- eventReactive(input$enrichment, {
+  #  req(reactive_hyp())
+  #  p <- hypeR::hyp_dots(reactive_hyp(), top=10, fdr=0.25)
     
     # These are just ggplot objects you could customize
-    p + theme(axis.text=element_text(size=12, face="bold"))
+  #  p + theme(axis.text=element_text(size=12, face="bold"))
     
-  })
+  #})
   
-  reactive_table <- eventReactive(input$enrichment, {
-    req(reactive_hyp())
-    tab <- hypeR::hyp_show(reactive_hyp())
-    tab
-  })
+ # reactive_table <- eventReactive(input$enrichment, {
+ #   req(reactive_hyp())
+ #   tab <- hypeR::hyp_show(reactive_hyp())
+ #   tab
+ # })
   
-  output$plot <- renderPlot({
-    reactive_plot()
-  })
+ # output$plot <- renderPlot({
+ #   reactive_plot()
+ # })
   
-  output$hyptab <- reactable::renderReactable({
-    reactive_table()
-  })
+#  output$hyptab <- reactable::renderReactable({
+#    reactive_table()
+#  })
   
   #-----------------------------------------------------------------------------
   # Page 7: Subsampling
